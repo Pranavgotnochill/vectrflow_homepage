@@ -59,7 +59,7 @@ const App = () => (
     
     <div className="footer-section">
       <div className="_2023-copyright-by-agency-solutions-all-rights-reserved">
-        © 2024 Copyright by VectrFlow. All rights reserved.
+        © 2023 Copyright by VectrFlow. All rights reserved.
       </div>
     </div>
   </div>

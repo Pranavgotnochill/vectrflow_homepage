@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { useState,useReducer } from 'react';
 const Ul = styled.ul`
   list-style: none;
   display: flex;
@@ -12,12 +13,13 @@ const Ul = styled.ul`
     text-align:center;
     background-color: white;
     transform: ${({ open }) => open ? 'translateX (0)' : 'translateX(-150%)'};
-
-    position:absolute;
-    height: 65vh;
-    width:100%;
-    top:60px;
     left:0;
+    position:absolute;
+    height: 100vh;
+    width:110%;
+    
+    top:55px;
+   
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
 
@@ -31,10 +33,14 @@ const Ul = styled.ul`
   }
 `;
 
+
+
+
 const RightNav = ({ open }) => {
+ 
   return (
     <Ul open={open}>
-       <Link to="/AboutUs" className="navbar-link">
+       <Link to="/AboutUs" className="navbar-link" target='_blank'>
           About Us
         </Link>
         <Link to="https://docs.vectrflow.com/" className="navbar-link" target="_blank">

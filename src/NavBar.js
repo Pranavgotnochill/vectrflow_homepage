@@ -7,8 +7,11 @@ import logoPath from "./public/VectrFlow_logo.png";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
+import { useEffect } from "react";
 
 const Navbar = () => {
+
+
   const firebaseConfig = {
     apiKey: "AIzaSyDfFQfoNTzlnPlKfQD6APfBAeuFqBxbxvA",
     authDomain: "vectrflow-405411.firebaseapp.com",
@@ -30,7 +33,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <Nav>
+      <Nav className="nav">
         <div className="logo-container">
           <Link to="/" className="logo-link">
             <img src={logoPath} alt="Logo" className="logo" />
